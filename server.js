@@ -14,6 +14,9 @@ http.createServer(function(request, response) {
     if(!exists) {
       response.writeHead(404, {"Content-Type": "text/plain"});
       response.write("404 Not Found\n");
+      response.write(filename + "does not exist\n ");
+      response.write("But I can still say, Hello Vivek bhownani\n");
+      response.write("I don't necessarily have to serve you "+filename);
       response.end();
       return;
     }
